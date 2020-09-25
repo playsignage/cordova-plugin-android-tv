@@ -1,29 +1,32 @@
 {
-    "version": "1.0.3",
-    "name": "com.hughisaacs2.cordova.plugins.androidtvplugin",
+    "version": "1.0.0",
+    "name": "cordova-plugin-android-tv",
     "cordova_name": "AndroidTVPlugin",
     "description": "Cordova Android TV Plugin",
-    "platforms": [
-        "android"
-    ],
+    "cordova": {
+        "id": "cordova-plugin-android-tv",
+        "platforms": [
+            "android"
+        ]
+    },
     "engines": [
         {
             "name": "cordova",
-            "version": ">=3.0.0"
+            "version": ">=8.0.0"
         }
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin.git"
+        "url": "git+https://github.com/playsignage/cordova-plugin-android-tv"
     },
     "keywords": [
         "ecosystem:cordova",
         "cordova-android"
     ],
-  "author": "Hugh Isaacs II",
+  "author": "Sander Sink",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin/issues"
+    "url": "https://github.com/playsignage/cordova-plugin-android-tv/issues"
   },
-  "homepage": "https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin"
+  "homepage": "https://github.com/playsignage/cordova-plugin-android-tv"
 }

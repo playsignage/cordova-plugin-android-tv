@@ -1,35 +1,32 @@
 Android TV Plugin for Cordova
 ==============================
 
-Cordova plugin to add tags to the AndroidManifest.xml that'll let your Cordova app run on Google TV, Android TV and OUYA.
+Cordova plugin to add support for Android TV to your project's AndroidManifest.xml. This fork has following changes:
 
-That's all it does (I just needed something to streamline this process for me).
-
-This does not add the Leanback banner, you'll sadly have to do that yourself (for now).
-
-If you want to interact with the controls on an Android TV or Google TV device just set events on the arrow keys like you would with a desktop web app.
-
-For gamepad support on anything below Android 5.0, turn to this plugin: https://github.com/judax/cordova-plugin-gamepad
-
-**Note:** For Ouya and Android TV the plugin was specifically set to be list your app as a game, if you want it to show up on an Ouya and Android TV as an app you'll have to replace the part in my plugin.xml file that says "tv.ouya.intent.category.GAME" with "tv.ouya.intent.category.APP" and the part that says 'android:isGame="true"' to false.
-
-To-do
--------
-* Set Android TV leanback banner from Cordova manifest.
-* Set "isGame" from Cordova manifest.
-* Set "uses gamepad" from Cordova manifest.
-* Set app requirements from Cordova manifest (might make this into a separate plugin).
+- Has been updated to work with cordova > 8
+- Standardised cordova plugin name
+- Uses newer cordova feature `edit-config` instead of a JavaScript hook modifying AndoridManifest directly
+- Sets `android:isGame=false` declaration in the manifest instead of `true`
+- Accounts for the new location of AndroidManifest.xml at `platforms/android/app/src/main/AndroidManifest.xml`
 
 Install
 -------
 
-`cordova plugin add https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git`
+`cordova plugin add https://github.com/playsignage/cordova-plugin-android-tv`
+
+AndroidTV requires a banner image that is 320x180 png file. You will need to add following line to your cordova config.xml that will copy the banner file, else the app won't compile.
+
+`<resource-file src="path/to/your/banner.png" target="app/src/main/res/drawable/banner.png" />`
 
 Source
 -------------
-https://github.com/hughisaacs2/Cordova-Android-TV-Plugin
+https://github.com/playsignage/cordova-plugin-android-tv
 
 License
 -------
 
 This has been released under MIT license; see LICENSE for details.
+
+Forked from
+-----------
+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin
