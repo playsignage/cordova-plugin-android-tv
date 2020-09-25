@@ -30,8 +30,5 @@
       <category android:name="tv.ouya.intent.category.APP" />
       <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
     </config-file>
-    <edit-config comment="" file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-      <application android:banner="@drawable/banner" android:isGame="false" />
-    </edit-config>
   </platform>
 </plugin>
